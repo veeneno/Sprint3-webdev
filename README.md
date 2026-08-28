@@ -47,3 +47,12 @@ O login é fictício (hardcoded), apenas para fins de protótipo — não há um
 | `admin` | `1234` |
 
 Após o login, o estado de "logado" fica salvo no `localStorage`, então ao recarregar a página o usuário continua autenticado até clicar em "Sair".
+
+## Onde e como a IA foi utilizada no projeto
+
+IA foi utilizada em algumas partes específicas como a proteção de rotas (não poder acessar o dashboard sem logar), algumas partes do CSS como alterar do modo claro para o escuro e salvar isso no LocalStorage.
+E foi utilizada para auxílio da mudança da página de HTML CSS e JS puros para React + Vite
+
+## Link do deploy na vercel
+
+https://sprint3-webdev-omega.vercel.app/
