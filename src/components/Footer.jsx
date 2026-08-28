@@ -3,7 +3,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <p>© {currentYear} RawShot — Projeto acadêmico Sprint 3</p>
+      <p>© {currentYear} Equipe Rocket — Sprint 3</p>
     </footer>
   )
 }

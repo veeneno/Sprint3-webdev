@@ -9,8 +9,6 @@ function Login() {
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
-  // Se o usuário já tiver logado antes (flag salva no localStorage),
-  // pula a tela de login e vai direto para o dashboard.
   useEffect(() => {
     if (isAuthenticated()) {
       navigate('/dashboard')
