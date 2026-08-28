@@ -1,7 +1,3 @@
-/* Estilo global do projeto — bem simples, apenas com o essencial
-   para o layout e para o suporte a tema claro/escuro (via
-   atributo data-theme, controlado pelo ThemeContext + localStorage). */
-
 :root {
   --bg: #f7f7f9;
   --bg-card: #ffffff;
@@ -43,7 +39,6 @@ body {
   min-height: 100vh;
 }
 
-/* Layout (Header + conteúdo + Footer) */
 .layout {
   min-height: 100vh;
   display: flex;
@@ -56,7 +51,6 @@ body {
   flex-direction: column;
 }
 
-/* Header */
 .header {
   display: flex;
   align-items: center;
@@ -100,7 +94,6 @@ body {
   border-color: var(--accent);
 }
 
-/* Footer */
 .footer {
   padding: 16px 24px;
   text-align: center;
@@ -177,8 +170,224 @@ body {
   opacity: 0.9;
 }
 
-/* Dashboard */
 .dashboard-page {
   flex: 1;
   padding: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.dashboard-header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.gallery-filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.filter-group select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 0.9rem;
+  min-width: 180px;
+}
+
+.empty-state {
+  color: var(--text-muted);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-card);
+  cursor: pointer;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.photo-card:hover {
+  border-color: var(--accent);
+}
+
+.photo-thumbnail {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-icon {
+  font-size: 2rem;
+}
+
+.photo-info {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.photo-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.photo-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.photo-badge {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-edited {
+  background: var(--accent-bg, rgba(79, 70, 229, 0.15));
+  color: var(--accent);
+}
+
+.badge-raw {
+  background: var(--border);
+  color: var(--text-muted);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 420px;
+  width: 100%;
+  padding: 24px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.modal-thumbnail {
+  height: 140px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.modal-card h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+.modal-details {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-details li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  gap: 12px;
+}
+
+.modal-details li span {
+  color: var(--text-muted);
+}
+
+.modal-prompt {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-prompt span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.modal-prompt p {
+  margin: 0;
+  font-style: italic;
+}
+
+.modal-prompt-empty span {
+  font-style: italic;
 }
