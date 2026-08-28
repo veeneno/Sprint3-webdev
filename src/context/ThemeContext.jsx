@@ -1,11 +1,8 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 
-// Contexto responsável por guardar o tema (claro/escuro) e persistir
-// a escolha do usuário no localStorage, para que a preferência
-// seja lembrada mesmo depois de fechar o navegador.
 const ThemeContext = createContext(null)
 
-const STORAGE_KEY = 'raw-shot-theme'
+const STORAGE_KEY = 'rocket-theme'
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {

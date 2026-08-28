@@ -2,9 +2,6 @@ import { useNavigate } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import { isAuthenticated, logout } from '../utils/auth'
 
-// Componente "filho" usado dentro do Layout (componente "pai").
-// Mostra o nome do app, o botão de trocar tema e, se o usuário
-// estiver logado, o botão de logout.
 function Header() {
   const { theme, toggleTheme } = useTheme()
   const navigate = useNavigate()

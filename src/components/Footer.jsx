@@ -1,4 +1,3 @@
-// Componente "filho" simples, usado dentro do Layout (componente "pai").
 function Footer() {
   const currentYear = new Date().getFullYear()
 

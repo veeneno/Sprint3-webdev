@@ -5,7 +5,7 @@ const HARDCODED_USER = {
   password: '1234',
 }
 
-const AUTH_STORAGE_KEY = 'raw-shot-logged-in'
+const AUTH_STORAGE_KEY = 'rocket-logged-in'
 
 export function login(username, password) {
   const isValid =
