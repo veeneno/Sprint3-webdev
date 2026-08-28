@@ -16,7 +16,7 @@ function Header() {
     <header className="header">
       <div className="header-brand">
         <span className="header-logo">📷</span>
-        <span className="header-title">RawShot</span>
+        <span className="header-title">Equipe Rocket</span>
       </div>
 
       <div className="header-actions">
