@@ -1,6 +1,6 @@
-# RawShot
+# Equipe Rocket
 
-Protótipo web do projeto RawShot: um app de câmera fotográfica que captura fotos em modo RAW e permite editá-las depois com IA. Esta versão web contém duas telas: login e dashboard (galeria de fotos).
+Protótipo web do projeto Equipe Rocket: um app de câmera fotográfica que captura fotos em modo RAW e permite editá-las depois com IA. Esta versão web contém duas telas: login e dashboard (galeria de fotos).
 
 ## Tecnologias utilizadas
 
