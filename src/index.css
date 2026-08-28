@@ -1,0 +1,184 @@
+/* Estilo global do projeto — bem simples, apenas com o essencial
+   para o layout e para o suporte a tema claro/escuro (via
+   atributo data-theme, controlado pelo ThemeContext + localStorage). */
+
+:root {
+  --bg: #f7f7f9;
+  --bg-card: #ffffff;
+  --text: #1c1c1e;
+  --text-muted: #6b6b70;
+  --border: #e2e2e6;
+  --accent: #4f46e5;
+  --accent-text: #ffffff;
+  --error: #d92d20;
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #17171a;
+  --bg-card: #232326;
+  --text: #f2f2f3;
+  --text-muted: #a3a3a8;
+  --border: #35353a;
+  --accent: #818cf8;
+  --accent-text: #17171a;
+  --error: #f97066;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Layout (Header + conteúdo + Footer) */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.header-logo {
+  font-size: 1.4rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle,
+.logout-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.theme-toggle:hover,
+.logout-button:hover {
+  border-color: var(--accent);
+}
+
+/* Footer */
+.footer {
+  padding: 16px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Login */
+.login-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.login-subtitle {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.login-card label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.login-card input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.login-error {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+}
+
+.login-button {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+/* Dashboard */
+.dashboard-page {
+  flex: 1;
+  padding: 24px;
+}
